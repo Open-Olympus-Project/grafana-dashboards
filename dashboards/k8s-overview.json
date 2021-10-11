@@ -3238,7 +3238,7 @@
   "tags": [
     "kubernetes",
     "DEFINITIVE",
-    "SERVICE"
+    "service"
   ],
   "templating": {
     "list": [
