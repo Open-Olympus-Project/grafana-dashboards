@@ -1,0 +1,10 @@
+{{ range $path, $_ :=  .Files.Glob  "files/*" }}
+---      
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ ($path | replace "files/" "" | split ".")._0 }}
+data:
+  {{ $path | replace "files/" "" }}: |
+{{ $.Files.Get $path | indent 4 }}
+{{ end }}
