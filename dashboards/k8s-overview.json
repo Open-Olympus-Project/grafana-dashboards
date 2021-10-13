@@ -23,7 +23,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 11663,
   "graphTooltip": 1,
-  "iteration": 1633947207764,
+  "iteration": 1634116483099,
   "links": [
     {
       "asDropdown": true,
@@ -3398,11 +3398,11 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "MC_env-aks-ps-test_env-aks-ps-test_westeurope",
-          "value": "MC_env-aks-ps-test_env-aks-ps-test_westeurope"
+          "text": "MC_service-aks-ps_service-aks-ps_westeurope",
+          "value": "MC_service-aks-ps_service-aks-ps_westeurope"
         },
         "datasource": null,
-        "definition": "label_values(container_last_seen{kubernetes_azure_com_cluster!~\".*$env.*\"}, kubernetes_azure_com_cluster)",
+        "definition": "label_values(container_last_seen{kubernetes_azure_com_cluster=~\".*$env.*\"}, kubernetes_azure_com_cluster)",
         "description": null,
         "error": null,
         "hide": 2,
@@ -3412,7 +3412,7 @@
         "name": "cluster",
         "options": [],
         "query": {
-          "query": "label_values(container_last_seen{kubernetes_azure_com_cluster!~\".*$env.*\"}, kubernetes_azure_com_cluster)",
+          "query": "label_values(container_last_seen{kubernetes_azure_com_cluster=~\".*$env.*\"}, kubernetes_azure_com_cluster)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -3484,5 +3484,5 @@
   "timezone": "browser",
   "title": "K8s Cluster Metrics",
   "uid": "taQlRuxik",
-  "version": 2
+  "version": 1
 }
